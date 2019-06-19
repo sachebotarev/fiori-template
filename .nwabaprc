@@ -1,0 +1,9 @@
+{
+    "base": "./dist",
+    "conn_server": "http://myserver:8000",
+    "conn_user": "upload",
+    "conn_password": "upl04d",
+    "abap_package": "$TMP",
+    "abap_bsp": "ZZ_UI5_LOCAL",
+    "abap_bsp_text": "UI5 upload local objects"
+}

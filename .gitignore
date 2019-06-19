@@ -1,0 +1,11 @@
+sapui5-sdk/
+dist/
+webapp/resources
+
+bower_components/
+.DS_Store
+node_modules/
+.vscode/
+
+logs
+*.log

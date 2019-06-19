@@ -1,0 +1,42 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - test
+  - deploy
+
+test_job:
+    stage: test
+    script:
+      - npm install
+      - npm run test
+    tags:
+      - fiori
+
+lint_job:
+    stage: test
+    script:
+      - npm install
+      - npm run lint
+    tags:
+      - fiori
+    
+
+deploy_job:
+    stage: deploy
+    only:
+      - develop
+    script:
+      - npm install
+      - npm run build
+      - npm run zip
+      - npm run deploy
+    artifacts:
+      paths:
+        - bandle.zip
+      expire_in: 1 day
+    tags:
+      - fiori
